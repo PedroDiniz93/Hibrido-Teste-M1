@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+          <reference name="content">
+            <block
+                type="colorpalette/frontend_style"
+                name="pagsegurocredito/frontend_style"
+                template="colorpalette/style.phtml"
+            />
+        </reference>
+    </default>
+</layout>

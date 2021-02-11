@@ -1,0 +1,10 @@
+<?php $classes = $this->getRulesClass() ?>
+<?php if ($classes): ?>
+    <style>
+    <?php foreach ($classes as $class): ?>
+        <?php echo ('.' . $class['class'] . '{') ?>
+            <?php echo ('background-color: ' . $class['color'] . '!important;') ?>
+        <?php echo ('}') ?>
+    <?php endforeach; ?>
+    </style>
+<?php endif; ?>

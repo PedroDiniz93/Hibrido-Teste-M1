@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <colorpalette>
+            <title>Paleta de cores</title>
+            <sort_order>99</sort_order>
+            <children>
+                <rules module="colorpalette">
+                    <title>Regras de cores</title>
+                    <sort_order>5</sort_order>
+                    <action>adminhtml/rules</action>
+                </rules>
+                <elements module="colorpalette">
+                    <title>Adicionar Elementos (classes)</title>
+                    <sort_order>5</sort_order>
+                    <action>adminhtml/elements</action>
+                </elements>
+                <config translate="title">
+                    <title>Configurações</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/system_config/edit/section/colorpalette</action>
+                </config>
+            </children>
+        </colorpalette>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <colorpalette>
+                        <title>Módulo Paleta de cores</title>
+                        <sort_order>99</sort_order>
+                        <children>
+                            <rules module="colorpalette">
+                                <title>Regras de cores</title>
+                                <sort_order>5</sort_order>
+                            </rules>
+                             <elements module="colorpalette">
+                                <title>Adicionar elementos</title>
+                                <sort_order>5</sort_order>
+                            </elements>
+                            <config translate="title">
+                                <title>Configurações</title>
+                                <sort_order>10</sort_order>
+                            </config>
+                        </children>
+                    </colorpalette>
+                </children>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <colorpalette translate="title" module="colorpalette">
+                                        <title>Paleta de cores</title>
+                                        <sort_order>99</sort_order>
+                                    </colorpalette>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

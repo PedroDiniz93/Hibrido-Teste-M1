@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hibrido_ColorPalette>
+            <version>1.0.0</version>
+        </Hibrido_ColorPalette>
+    </modules>
+    <!-- R O U T E R S -->
+    <!-- F R O N T E N D -->
+    <frontend>
+        <routers>
+            <colorpalette>
+                <use>standard</use>
+                <args>
+                    <module>Hibrido_ColorPalette</module>
+                    <frontName>colorpalette</frontName>
+                </args>
+            </colorpalette>
+        </routers>
+        <layout>
+            <updates>
+                <colorpalette>
+                    <file>colorpalette.xml</file>
+                </colorpalette>
+            </updates>
+        </layout>
+    </frontend>
+    <!-- F R O N T E N D -->
+    <!-- A D M I N -->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <colorpalette before="Mage_Adminhtml">Hibrido_ColorPalette_Adminhtml</colorpalette>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <!-- A D M I N -->
+    <!-- R O U T E R S -->
+    <adminhtml>
+        <layout>
+            <updates>
+                <colorpalette>
+                    <file>colorpalette.xml</file>
+                </colorpalette>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <!-- G L O B A L S -->
+    <global>
+        <models>
+            <colorpalette>
+                <class>Hibrido_ColorPalette_Model</class>
+                <resourceModel>colorpalette_resources</resourceModel>
+            </colorpalette>
+            <colorpalette_resources>
+                <class>Hibrido_ColorPalette_Model_Resources</class>
+                <entities>
+                    <rules>
+                        <table>colorpalette_rules</table>
+                    </rules>
+                    <elements>
+                        <table>colorpalette_elements</table>
+                    </elements>
+                </entities>
+            </colorpalette_resources>
+        </models>
+        <blocks>
+            <colorpalette>
+                <class>Hibrido_ColorPalette_Block</class>
+            </colorpalette>
+        </blocks>
+        <helpers>
+            <colorpalette>
+                <class>Hibrido_ColorPalette_Helper</class>
+            </colorpalette>
+        </helpers>
+        <!-- R E S O U R C E -->
+        <resources>
+            <colorpalette_setup>
+                <setup>
+                    <module>Hibrido_ColorPalette</module>
+                    <class>Mage_Sales_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </colorpalette_setup>
+            <colorpalette_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </colorpalette_write>
+            <colorpalette_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </colorpalette_read>
+        </resources>
+        <!-- R E S O U R C E -->
+    </global>
+    <!-- G L O B A L S -->
+</config>
