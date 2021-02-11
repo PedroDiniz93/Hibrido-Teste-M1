@@ -4,7 +4,7 @@
             <img src="./.github/assets/img/logo.png" width="100px">
         </td>
         <td>
-            <h1 style="font-weight:bold">Módulo Bling</h1>
+            <h1 style="font-weight:bold">Módulo Color Palette</h1>
         </td>
     </tr>
 </table>
